@@ -1,0 +1,51 @@
+{
+  "collection": "family-steward-v0",
+  "records": [
+    {
+      "event_id": "evt-appointment-conflict",
+      "path": "memory/evt-appointment-conflict.md",
+      "sha256": "68970b48d9dd29a85839b34bac15af85ec9e0ff9b73bbb8e884d984c1de8cef2"
+    },
+    {
+      "event_id": "evt-appointment-pack",
+      "path": "memory/evt-appointment-pack.md",
+      "sha256": "6fa5b322bda8bafac2458b08f50d3dfc481b9a8c90780af052e7953b1ac7161a"
+    },
+    {
+      "event_id": "evt-morning-preference",
+      "path": "memory/evt-morning-preference.md",
+      "sha256": "be1cb2df26969044b6764a358c927a988c9486378aa15be8464c8581e1d8098c"
+    },
+    {
+      "event_id": "evt-renewal-authorize",
+      "path": "memory/evt-renewal-authorize.md",
+      "sha256": "b527b563fd090a3d1605c8f7275ce8bc34217dd98d15a2b32679d860f09e08bb"
+    },
+    {
+      "event_id": "evt-renewal-compare",
+      "path": "memory/evt-renewal-compare.md",
+      "sha256": "fa4cb107099a5a2e4491922c1f5718199752ee4aa954dbc96dbe4b1bc6d7c13f"
+    },
+    {
+      "event_id": "evt-renewal-fact",
+      "path": "memory/evt-renewal-fact.md",
+      "sha256": "8d41b91be3347673e32561a80b87c604af6de13dec03579ce33e48e951794a7a"
+    },
+    {
+      "event_id": "evt-school-form-prepare",
+      "path": "memory/evt-school-form-prepare.md",
+      "sha256": "46688b25aa6ab51ee02225ef66263794d42812683869dfe0579d9a7b1652c8c1"
+    },
+    {
+      "event_id": "evt-school-form-sign",
+      "path": "memory/evt-school-form-sign.md",
+      "sha256": "b2f2b9433c9043f74b5f1ee86d4a1c605cad6e2006da9660e728f52c35f820ac"
+    },
+    {
+      "event_id": "evt-travel-preference",
+      "path": "memory/evt-travel-preference.md",
+      "sha256": "faf059b5eeb030f1e50aff09081c7385e43893a57ea9670f5231262571e623c4"
+    }
+  ],
+  "schema_version": "family-steward-qmd-authority-v0"
+}

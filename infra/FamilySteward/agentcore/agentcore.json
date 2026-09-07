@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schema.agentcore.aws.dev/v1/agentcore.json",
+  "name": "FamilySteward",
+  "version": 1,
+  "managedBy": "CDK",
+  "tags": {
+    "agentcore:created-by": "agentcore-cli",
+    "agentcore:project-name": "FamilySteward"
+  },
+  "runtimes": [
+    {
+      "name": "FamilyStewardReviewer",
+      "build": "CodeZip",
+      "entrypoint": "family_steward/agentcore_app.py",
+      "codeLocation": ".agentcore-build/FamilyStewardReviewer",
+      "runtimeVersion": "PYTHON_3_12",
+      "networkMode": "PUBLIC",
+      "protocol": "HTTP",
+      "authorizerType": "AWS_IAM",
+      "lifecycleConfiguration": {
+        "idleRuntimeSessionTimeout": 60,
+        "maxLifetime": 300
+      }
+    }
+  ],
+  "memories": [],
+  "knowledgeBases": [],
+  "credentials": [],
+  "evaluators": [],
+  "onlineEvalConfigs": [],
+  "agentCoreGateways": [],
+  "policyEngines": [],
+  "configBundles": [],
+  "abTests": [],
+  "harnesses": [],
+  "datasets": [],
+  "payments": []
+}

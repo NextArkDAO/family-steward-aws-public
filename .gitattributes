@@ -1,0 +1,7 @@
+* text=auto
+
+# Cryptographically pinned fixtures must be byte-identical on every workstation.
+fixtures/qmd-authority-manifest.json text eol=lf
+fixtures/qmd-corpus/**/*.md text eol=lf
+fixtures/fictional_household.jsonl text eol=lf
+

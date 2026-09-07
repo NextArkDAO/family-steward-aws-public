@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Family Steward</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="#today" aria-label="Family Steward home">
+          <span class="brand-mark" aria-hidden="true">FS</span>
+          <span><strong>Family Steward</strong><small id="household-name">Household</small></span>
+        </a>
+        <div class="status"><span></span><strong>Aster</strong> has prepared your review</div>
+      </header>
+
+      <nav class="nav" aria-label="Workspace">
+        <a class="active" href="#today">Today</a>
+        <a href="#handled">Handled quietly</a>
+        <a href="#memory">Family memory</a>
+      </nav>
+
+      <main id="today">
+        <section class="intro">
+          <div>
+            <p class="eyebrow">Monday, August 24 / Demo day</p>
+            <h1>Your family, one step ahead.</h1>
+            <p>Aster prepares the routine work and brings you only the decisions that need you.</p>
+          </div>
+          <div class="mode"><span>Private by design</span><small id="demo-mode">Fictional household demo</small></div>
+        </section>
+
+        <section class="decision-band" aria-labelledby="decision-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Needs your decision</p>
+              <h2 id="decision-title">One thing needs you</h2>
+            </div>
+            <span class="count" id="decision-count">1</span>
+          </div>
+          <div id="decision-list" class="decision-list" aria-live="polite"></div>
+        </section>
+
+        <section id="handled" class="content-section" aria-labelledby="handled-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Handled quietly</p>
+              <h2 id="handled-title">Already moving</h2>
+            </div>
+            <span class="subtle" id="prepared-count">0 prepared</span>
+          </div>
+          <div id="prepared-list" class="rows"></div>
+        </section>
+
+        <section id="memory" class="content-section memory-section" aria-labelledby="memory-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Family memory</p>
+              <h2 id="memory-title">What Aster is keeping in mind</h2>
+            </div>
+            <span class="subtle" id="memory-count">0 active</span>
+          </div>
+          <div id="memory-list" class="rows"></div>
+        </section>
+
+        <section class="retrieval-strip" aria-labelledby="retrieval-title">
+          <div class="retrieval-mark" aria-hidden="true">Q</div>
+          <div>
+            <p class="eyebrow">Local memory search</p>
+            <h2 id="retrieval-title">QMD is ready to join Aster</h2>
+            <p id="retrieval-detail">Checking the local retrieval boundary.</p>
+          </div>
+          <span class="badge" id="retrieval-state">Checking</span>
+          <form class="memory-search" id="memory-search">
+            <label for="memory-query">Ask Aster what the family remembers</label>
+            <div>
+              <input id="memory-query" name="query" maxlength="500" placeholder="What time should routine updates start?" required>
+              <button class="button" type="submit">Search memory</button>
+            </div>
+          </form>
+          <div class="memory-search-result" id="memory-search-result" hidden aria-live="polite"></div>
+        </section>
+
+        <section class="cloud-review" aria-labelledby="cloud-title">
+          <div>
+            <p class="eyebrow">AWS reasoning</p>
+            <h2 id="cloud-title">Aster can review the fictional packet</h2>
+            <p>AgentCore reviews the original fictional snapshot with Amazon Nova Micro. One cloud attempt per demo session; local approvals are not uploaded. Nothing runs on refresh.</p>
+          </div>
+          <button class="button primary" id="cloud-review" type="button">Run fictional cloud review</button>
+          <div class="cloud-result" id="cloud-result" hidden aria-live="polite"></div>
+        </section>
+      </main>
+
+      <footer><span>NextArk</span><span>No real household data is used in this demonstration.</span></footer>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>

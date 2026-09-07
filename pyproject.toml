@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "family-steward"
+version = "0.1.0"
+description = "A quiet household agent that surfaces only real decisions."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "Dwayne Swinton", email = "nextarkdao@gmail.com" },
+]
+dependencies = []
+
+[project.optional-dependencies]
+agent = [
+  "boto3==1.43.78",
+  "botocore[crt]==1.43.78",
+  "strands-agents==1.53.0",
+]
+agentcore = [
+  "bedrock-agentcore==1.22.0",
+]
+dev = [
+  "pytest==9.1.1",
+  "ruff==0.16.4",
+]
+
+[project.scripts]
+family-steward = "family_steward.cli:main"
+family-steward-cloud = "family_steward.cloud_demo:main"
+family-steward-agentcore = "family_steward.agentcore_app:main"
+family-steward-web = "family_steward.web:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
