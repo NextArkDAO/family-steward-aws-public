@@ -6,14 +6,23 @@ Public source release for the AWS Agents for Humans Hackathon.
 [Architecture](docs/ARCHITECTURE.md) |
 [Judge setup](docs/JUDGE_GUIDE.md)
 
+## Run the local demo
+
+From the repository root, use Python 3.12 to start the fictional Carter household demo. It runs entirely on your machine with the Python standard library and requires no package installation or AWS credentials.
+
+```sh
+cd src
+python3.12 -m family_steward.web
+```
+
+Open <http://127.0.0.1:4180>. Explore a school form, an appointment conflict, or a renewal decision. Local decisions last for the server session. Press Ctrl+C to stop the demo.
+
+## About the project
+
 This repository starts with a sanitized source snapshot. Private operational
 history and deployment state are not included. The runnable application,
 fictional fixtures, tests and infrastructure source are included. No other
 NextArk submission is modified by this release.
-
-Before deploying in your own AWS account, replace the deliberately invalid
-`000000000000` example in `infra/FamilySteward/agentcore/aws-targets.json`.
-Deployment can incur charges. No owner credentials or runtime access are bundled.
 
 Family Steward is a quiet household companion that handles recurring family
 administration and only interrupts when a real human decision is required.
@@ -51,24 +60,20 @@ Across each storyline, Family Steward can:
 - No silent rewriting of household facts or preferences.
 - No cloud deployment until the local product and cost gates pass.
 
-## Local setup
+## Optional AWS integration and development setup
 
-Python 3.10 or newer is required. Python 3.12 is the accepted development
-runtime for this repository.
+Before deploying in your own AWS account, replace the deliberately invalid
+`000000000000` example in `infra/FamilySteward/agentcore/aws-targets.json`.
+Deployment can incur charges. No owner credentials or runtime access are bundled.
+
+From the repository root in PowerShell:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -e ".[dev,agent,agentcore]"
 python -m pytest
-python -m family_steward.web
 ```
-
-The household experience opens at `http://127.0.0.1:4180`. It uses only the
-fictional fixture and records demonstration decisions in memory for the life
-of that local server. It never changes the fixture on disk. The cloud review
-is an explicit user action; loading or refreshing the page never invokes a
-model or spends credits.
 
 The Strands agent layer is optional during deterministic core testing. AWS
 credentials are not required for the test suite or local demo. The adapter
@@ -107,8 +112,7 @@ Start with [Judge guide](docs/JUDGE_GUIDE.md),
 [architecture](docs/ARCHITECTURE.md),
 [privacy](docs/PRIVACY_AND_RESPONSIBLE_AI.md), and
 [submission checklist](docs/SUBMISSION_CHECKLIST.md).
-This is not yet a submitted entry. The public video and final judge-access
-arrangement still require completion and operator review.
+The demo video is linked above. See the submission checklist for judge-access requirements.
 
 ## License
 
